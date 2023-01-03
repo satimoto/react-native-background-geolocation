@@ -7,6 +7,7 @@
   "scripts": {
     "link": "@satimoto/react-native-background-geolocation/scripts/postlink.js",
     "unlink": "@satimoto/react-native-background-geolocation/scripts/postunlink.js",
+    "postinstall": "@satimoto/react-native-background-geolocation/scripts/postinstall.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -1,18 +1,8 @@
 #!/bin/sh -e
-
-module="$1"
-
-if [ -z "$module" ]
-then
-  module="@satimoto/react-native-background-geolocation"
-fi
-
 basedir=$(pwd)
-gitmodules="$basedir/$module/.gitmodules"
+gitmodules="$basedir/.gitmodules"
 path=""
 url=""
-
-cd $module;
 
 while IFS= read -r line; do
   line=($(echo $line | tr -d " "));
@@ -24,7 +14,7 @@ while IFS= read -r line; do
 
     if [ -d "$path/.git" ] ; then
       cd $path;
-      echo "pulling $basedir/$module/$path"
+      echo "pulling $basedir/$path"
       git pull;
       cd - > /dev/null;
     else

@@ -4,8 +4,7 @@ module="$1"
 
 if [ -z "$module" ]
 then
-  echo "Expect 1 argument."
-  exit -1
+  module="@satimoto/react-native-background-geolocation"
 fi
 
 basedir=$(pwd)
